@@ -53,7 +53,7 @@ syn match sblFloat '-\=\<\d\+\.\d\+[eE]-\=\d\+\>'
 syn match sblHexNumber '\(\(B\|W\|DW\)\+#\)\?$[0-9a-fA-F]\+'
 
 "Comment
-syn region sblComment start="/" end="$" contains=sblTodo,sblSpaceError
+syn region sblComment start="!" end="$" contains=sblTodo,sblSpaceError
 
 "functions
 syn keyword sblFunction Abs Arctan Cos Exp Ln Sin Sqr Sqrt

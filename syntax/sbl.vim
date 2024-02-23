@@ -13,16 +13,18 @@ syn case ignore
 syn keyword sblBoolean true false
 syn keyword sblConditional if else then case elsif compare
 syn keyword sblConditional end 
-syn keyword sblConstant %% % OPEN CLOSE ON OFF OK NG TMSTOP TMSTAT TMCONT TMPAUS
+syn keyword sblConstant OPEN CLOSE ON OFF OK NG TMSTOP TMSTAT TMCONT TMPAUS
 syn keyword sblLabel goto errorsub
 syn keyword sblOperator and div mod not or shl shr xor
 syn keyword sblRepeat do for repeat while to until by of
-syn keyword sblRepeat next@
+syn keyword sblRepeat next
 syn keyword sblStatement wait
 syn keyword sblStruct struct
 syn keyword sblStruct end_struct
 syn keyword sblType array char
 syn keyword sblType string
+syn match sblConstant "[\%]+"
+syn match sblRepeat "next@"
 
 " Todos
 syn keyword sblTodo contained TODO FIXME XXX DEBUG NOTE
@@ -59,10 +61,7 @@ syn keyword sblFunction cat getname history assign to
 syn keyword sblFunction ccmreadbid cmwritebid format
 
 "Types
-syn keyword sblType char integer long float double
-
-"Constant
-syn keyword sblConstant TITLE NAME AUTHOR FAMILY VERSION % %%
+syn keyword sblType char integer long float double global genname
 
 syn keyword sblStatement fail otherwise operator
 
